@@ -102,6 +102,19 @@ fi
 | **Scalability**    | Use distributed setup if needed                           |
 | **Visualization**  | Add graphs and dashboards                                 |
 
+## Common port numbers related to Nagios monitoring services:
+
+| **Service/Protocol**                 |**Default Port Number**| **Description**                       |
+| ------------------------------------ | --------------------- | ------------------------------------- |
+| HTTP                                 | 80                    | Standard web traffic                  |
+| HTTPS                                | 443                   | Secure web traffic (Nagios Web UI)    |
+| NRPE (Nagios Remote Plugin Executor) | 5666                  | Remote checks on Linux/Unix hosts     |
+| NCPA (Nagios Cross-Platform Agent)   | 5693 (default)        | Remote monitoring agent with REST API |
+| NSClient++                           | 12489 (default)       | Windows monitoring agent              |
+| SSH                                  | 22                    | Secure shell access                   |
+| SMTP                                 | 25                    | Email sending (for alerts)            |
+| SNMP                                 | 161                   | Network monitoring protocol           |
+
 
 
 
