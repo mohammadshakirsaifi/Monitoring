@@ -61,6 +61,57 @@ Login with the `nagiosadmin` user you created during installation.
 - `check_disk_usage.sh` monitors root partition usage.  
 - Add more plugins in `/usr/local/nagios/libexec/` and reference them in `commands.cfg`.
 
+## New Plugin scripts (MySQL, HTTPS, CPU load)
+### 📂 File Placement Guide
+1. Nagios Configuration Files
+
+Go to your Nagios config directory (usually /usr/local/nagios/etc/).
+
+- Main config:
+`/usr/local/nagios/etc/nagios.cfg`
+(already in place from install, no change needed)
+
+- Objects directory:
+`/usr/local/nagios/etc/objects/`
+
+Place or update these files:
+
+`hosts.cfg` → defines monitored hosts
+
+`services.cfg` → defines monitored services (includes new MySQL, HTTPS, CPU load checks)
+
+`commands.cfg` → defines custom check commands (check_mysql, check_https, check_cpu_load)
+
+`contacts.cfg` → notification settings (email/Slack)
+
+2. Plugins / Custom Scripts
+
+Go to the Nagios plugins directory (default /usr/local/nagios/libexec/).
+
+Add the custom scripts below, make them executable:
+```bash
+sudo cp check_mysql.sh /usr/local/nagios/libexec/
+sudo cp check_https.sh /usr/local/nagios/libexec/
+sudo cp check_cpu_load.sh /usr/local/nagios/libexec/
+
+sudo chmod +x /usr/local/nagios/libexec/check_*.sh
+```
+3. Example Custom Plugin Scripts
+```bash
+check_mysql.sh
+check_https.sh
+check_cpu_load.sh
+```
+
+
+4. Apply and Restart
+```bash
+# Verify config
+sudo /usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg
+
+# Restart Nagios
+sudo systemctl restart nagios
+```
 ---
 
 ## 🌱 Next Steps Roadmap
