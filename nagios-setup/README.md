@@ -22,6 +22,9 @@ nagios-setup/
 1. Extract the zip file:
 ```bash
 unzip nagios-setup.zip -d ~/nagios-setup
+or
+git clone https://github.com/mohammadshakirsaifi/Monitoring.git
+cd Monitoring/
 ```
 
 2. Copy configs and scripts into Nagios directories:
