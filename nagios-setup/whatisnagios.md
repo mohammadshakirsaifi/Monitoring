@@ -1,7 +1,5 @@
-# Nagios Monitoring Tool
-
+#  What is Nagios
 Nagios is an open-source monitoring tool that helps you monitor systems, networks, and infrastructure. It alerts you when things go wrong and again when they get better. Nagios can monitor:
-
 - Server health (CPU, memory, disk usage)
 - Network services (HTTP, SMTP, FTP, SSH, etc.)
 - Applications
@@ -60,49 +58,38 @@ fi
 ```
  ### 3. Use Remote Agents
 
-Use NRPE or NCPA to monitor remote Linux/Windows servers.
-
-NCPA is newer and supports REST API-based checks.
+- Use NRPE or NCPA to monitor remote Linux/Windows servers.
+- NCPA is newer and supports REST API-based checks.
 
 4. Alerting & Notifications
 
-Set up notification escalations (e.g., notify Level 1 first, escalate to Level 2 after X mins).
-
-Integrate with Slack, PagerDuty, Microsoft Teams, etc., via webhooks or scripts.
-
-Customize thresholds (warning/critical) for your environment.
+- Set up notification escalations (e.g., notify Level 1 first, escalate to Level 2 after X mins).
+- Integrate with Slack, PagerDuty, Microsoft Teams, etc., via webhooks or scripts.
+- Customize thresholds (warning/critical) for your environment.
 
 ### 5. Performance Data and Graphing
 - Nagios itself doesn’t graph, but you can add:
-PNP4Nagios – RRDTool-based graphing
-
-Grafana + InfluxDB/Prometheus – for modern dashboards
+ - PNP4Nagios – RRDTool-based graphing
+ - Grafana + InfluxDB/Prometheus – for modern dashboards
 
 ### 6. Automate Config Management
 
-Nagios config is file-based (text). You can:
-
-Use Ansible/Chef to push configurations
-
-Use templating tools like NagiosQL or NConf for GUI-based config generation
+- Nagios config is file-based (text). You can:
+  - Use Ansible/Chef to push configurations
+  - Use templating tools like NagiosQL or NConf for GUI-based config generation
 
 ### 7. Scale Nagios (Advanced Usage)
 
-If your project grows big:
-
-Use Mod-Gearman to distribute checks across multiple worker nodes.
-
-Use Nagios XI (paid) for enterprise features and scalability.
-
-Use NRDP (Nagios Remote Data Processor) for passive check submission.
+- If your project grows big:
+  - Use Mod-Gearman to distribute checks across multiple worker nodes.
+  - Use Nagios XI (paid) for enterprise features and scalability.
+  - Use NRDP (Nagios Remote Data Processor) for passive check submission.
 
 ### 8. Security & Best Practices
 
-Use HTTPS for web interface
-
-Secure remote agents with firewalls and SSL
-
-Limit access to sensitive config files
+- Use HTTPS for web interface
+- Secure remote agents with firewalls and SSL
+- Limit access to sensitive config files
 
 ## 📌 Summary: Using Nagios to the Max
 
