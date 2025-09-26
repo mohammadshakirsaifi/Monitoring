@@ -73,8 +73,7 @@ Login with the `nagiosadmin` user you created during installation.
 `/usr/local/nagios/etc/objects/`
 
 - Place or update these files:
-
-`hosts.cfg` → defines monitored hosts
+&nbsp;&nbsp;• `hosts.cfg` → defines monitored hosts
 
 `services.cfg` → defines monitored services (includes new MySQL, HTTPS, CPU load checks)
 
