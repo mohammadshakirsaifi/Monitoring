@@ -73,11 +73,10 @@ Login with the `nagiosadmin` user you created during installation.
 `/usr/local/nagios/etc/objects/`
 
 - Place or update these files:
-  
-• **`hosts.cfg`** → defines monitored hosts
-• **`services.cfg`** → defines monitored services (includes new MySQL, HTTPS, CPU load checks)
-• **`commands.cfg`** → defines custom check commands (check_mysql, check_https, check_cpu_load)
-• **`contacts.cfg`** → notification settings (email/Slack)
+-  **`hosts.cfg`** → defines monitored hosts
+-  **`services.cfg`** → defines monitored services (includes new MySQL, HTTPS, CPU load checks)
+-  **`commands.cfg`** → defines custom check commands (check_mysql, check_https, check_cpu_load)
+-  **`contacts.cfg`** → notification settings (email/Slack)
 
 #### 2. Plugins / Custom Scripts
 
