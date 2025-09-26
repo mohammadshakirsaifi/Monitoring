@@ -1,13 +1,6 @@
 # Nagios Core Starter Setup
 
 This bundle contains starter configuration files and custom scripts to get Nagios Core running quickly.
-## What is Nagios
-Nagios is an open-source monitoring tool that helps you monitor systems, networks, and infrastructure. It’s designed to alert you when things go wrong and again when they get better. It can monitor:
-- Server health (CPU, memory, disk usage)
-- Network services (HTTP, SMTP, FTP, SSH, etc.)
-- Applications
-- Log files
-- Custom metrics via plugins or scripts
 
 ## 📂 Folder Structure
 
