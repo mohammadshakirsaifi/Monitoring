@@ -19,33 +19,34 @@ nagios-setup/
 
 ## 🚀 Deployment Steps
 
-1. Extract the zip file:
+#### 1. Extract the zip file:
 ```bash
 unzip nagios-setup.zip -d ~/nagios-setup
+or
+git clone https://github.com/mohammadshakirsaifi/Monitoring.git
+cd Monitoring/
 ```
-
-2. Copy configs and scripts into Nagios directories:
+#### 2. Copy configs and scripts into Nagios directories:
 ```bash
 sudo cp -r ~/nagios-setup/etc/* /usr/local/nagios/etc/
 sudo cp ~/nagios-setup/libexec/*.sh /usr/local/nagios/libexec/
 ```
 
-3. Make scripts executable:
+#### 3. Make scripts executable:
 ```bash
 sudo chmod +x /usr/local/nagios/libexec/*.sh
 ```
 
-4. Verify Nagios configuration:
+#### 4. Verify Nagios configuration:
 ```bash
 sudo /usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg
 ```
-
-5. Restart Nagios:
+#### 5. Restart Nagios:
 ```bash
 sudo systemctl restart nagios
 ```
 
-6. Access the web UI:
+#### 6. Access the web UI:
 ```
 http://<your-server-ip>/nagios/
 ```
