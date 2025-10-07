@@ -1,5 +1,5 @@
 # Monitoring Tools 
-####### Here’s a comparative breakdown of the listed tools (Datadog, CloudWatch, Nagios, WhatsUp Gold, SolarWinds/Orion, Sumo Logic, Dynatrace, Grafana+Prometheus+OTel/Loki/Tempo stack, Splunk, New Relic), focusing on their strengths & trade‑offs, and then what would tend to make the “best” choice for a large enterprise that has both multi-cloud and on‑premise needs. If you want, I can also score them (cost, performance, features etc) for your specific constraints.
+###### Here’s a comparative breakdown of the listed tools (Datadog, CloudWatch, Nagios, WhatsUp Gold, SolarWinds/Orion, Sumo Logic, Dynatrace, Grafana+Prometheus+OTel/Loki/Tempo stack, Splunk, New Relic), focusing on their strengths & trade‑offs, and then what would tend to make the “best” choice for a large enterprise that has both multi-cloud and on‑premise needs. If you want, I can also score them (cost, performance, features etc) for your specific constraints.
 
 ## Key dimensions to compare
 
