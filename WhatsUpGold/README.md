@@ -6,7 +6,8 @@
 ## Simple, Integrated Log Management & Archiving
 - **WhatsUp Gold Log Management provides easy visibility and management of device log data – all integrated into an easy-to-use, industry-leading interface. You can monitor, filter, search and alert on syslogs or Windows logs for every device in your network while also watching for meta trends like log volume changes. You can archive logs to any storage locations for any retention period to comply with regulatory requirements and preserve historical data.**
 
-![](photos/WhatsUpGold/log-mgmt-add-on.jpg)
+![Log Management Add-On](../photos/WhatsUpGold/log-mgmt-add-on.jpg)
+
 
 ### Network Availability and Performance Monitoring
 - **WhatsUp Gold is a comprehensive set of network monitoring tools designed for both on-premises and cloud environments.**
