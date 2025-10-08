@@ -370,6 +370,7 @@ To keep the ecosystem sustainable and efficient:
 - Best for AWS-native users → CloudWatch
 
 ### 🧭 2. Observability & Monitoring Tools Landscape
+| -------------------------------------------------------------------- |
 ┌───────────────────────────────────────────────────────────────┐
 │                   🌍 OBSERVABILITY LANDSCAPE                  │
 ├───────────────────────────────────────────────────────────────┤
@@ -388,7 +389,7 @@ To keep the ecosystem sustainable and efficient:
 │    💡 Strength: Open standards, extensible, cost-effective   │
 │                                                               │
 ├───────────────────────────────────────────────────────────────┤
-│  ☁️  SAAS & CLOUD-NATIVE OBSERVABILITY PLATFORMS             │
+│  ☁️  SAAS & CLOUD-NATIVE OBSERVABILITY PLATFORMS              │
 │  ────────────────────────────────────────                     │
 │  • Datadog — unified metrics, logs, traces, security          │
 │  • New Relic — full-stack APM and telemetry                   │
@@ -434,6 +435,7 @@ To keep the ecosystem sustainable and efficient:
 - Enterprise IT tools (SolarWinds, WhatsUp Gold) → ideal for legacy + network-heavy environments.
 - Log/SIEM tools (Splunk, Sumo Logic) → focus on log analytics, compliance, and security insights.
 - Hybrid approach → most organizations blend these layers for complete observability.
+  
 ┌──────────────────────────────────────────────────────────────┐
 │                   🧭 OBSERVABILITY LANDSCAPE                 │
 ├──────────────────────────────────────────────────────────────┤
