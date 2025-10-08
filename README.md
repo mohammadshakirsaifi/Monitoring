@@ -391,13 +391,22 @@ To keep the ecosystem sustainable and efficient:
 |                                            | **SolarWinds / Orion Platform**                 | Deep network & server visibility                   |                                                    |                                                          |
 |                                            | **WhatsUp Gold**                                | Network discovery and SNMP monitoring              |                                                    |                                                          |
 | **🔍 LOG ANALYTICS & SECURITY (SIEM FOCUS)** |                                                 |                                                    | Security monitoring, compliance, log analysis     | Scalable search, correlation, and alerting              |
-|                                            | **Splunk**                                      | Enterprise log analytics & SIEM                    |                                                    |                                                          |
+|                                            | **Splunk**                                      | Enterprise log analytics & SIEM                    |    Security, compliance, event correlation           |    Best for SOCs and incident response teams                                  |
 |                                            | **Sumo Logic**                                  | Cloud-native log and security analytics            |                                                    |                                                          |
+|                                            | **Elastic Stack (ELK)**                               | Often grouped in this category                        |                                                     |                                                      |
 | **⚙️ HYBRID & INTEGRATED ENVIRONMENTS**     |                                                 |                                                    | Enterprises moving from legacy to cloud-native     | Flexibility, vendor-neutral observability layer         |
 |                                            | **Combination**                                 | Open-source (Grafana/Prometheus) with SaaS tools    |                                                    |                                                          |
 |                                            | **OpenTelemetry Integration**                   | Instrument apps → send data to Datadog, Splunk, etc. |                                                    |                                                          |
 |                                            | **Typical Mix**                                 | AWS CloudWatch + Grafana + Splunk integration      |                                                    |                                                          |
-
+| **⚙️ APM (APPLICATION PERFORMANCE MONITORING)** |                                           |                                                       | Deep code-level performance insight                 | Ideal for developers and SREs                        |
+|                                            | **New Relic**                                          | Full-stack APM & telemetry                             |                                                     |                                                      |
+|                                            | **Dynatrace**                                          | Smart baselining & root cause                         |                                                     |                                                      |
+|                                            | **Datadog APM**                                        | Distributed tracing & RUM                             |                                                     |                                                      |
+|                                            | **AppDynamics**                                        | Often compared with others                            |                                                     |                                                      |
+| **🏢 INFRASTRUCTURE & NETWORK MONITORING**  |                                                        |                                                       | Strong for servers, routers, and SNMP data          | Common in hybrid or legacy environments              |
+|                                            | **SolarWinds / Orion**                                | Enterprise IT suite                                   |                                                     |                                                      |
+|                                            | **WhatsUp Gold**                                       | Network monitoring & maps                             |                                                     |                                                      |
+|                                            | **Zabbix / Nagios**                                    | Open-source alternatives                              |                                                     |                                                      |
 
 
 ### 🧠  Key Insights
@@ -407,80 +416,6 @@ To keep the ecosystem sustainable and efficient:
 - Enterprise IT tools (SolarWinds, WhatsUp Gold) → ideal for legacy + network-heavy environments.
 - Log/SIEM tools (Splunk, Sumo Logic) → focus on log analytics, compliance, and security insights.
 - Hybrid approach → most organizations blend these layers for complete observability.
-  
-┌──────────────────────────────────────────────────────────────┐
-│                   🧭 OBSERVABILITY LANDSCAPE                 │
-├──────────────────────────────────────────────────────────────┤
-
-   ┌────────────────────────────────────────────┐
-   │ 🟢 OPEN-SOURCE STACK                      │
-   ├────────────────────────────────────────────┤
-   │ • Grafana — Visualization & dashboards     │
-   │ • Prometheus — Metrics & alerting          │
-   │ • Loki — Log aggregation                   │
-   │ • Tempo — Distributed tracing              │
-   │ • OpenTelemetry — Unified instrumentation  │
-   │ • Zabbix — Infrastructure monitoring       │
-   │ • Nagios — Plugin-based monitoring system  │
-   └────────────────────────────────────────────┘
-          ⬇
-     *Self-hosted, flexible, cost-efficient*
-     *Best for DevOps and cloud-native teams*
-
-───────────────────────────────────────────────────────────────
-
-   ┌────────────────────────────────────────────┐
-   │ ☁️ SAAS OBSERVABILITY PLATFORMS            │
-   ├────────────────────────────────────────────┤
-   │ • Datadog — Full-stack observability       │
-   │ • New Relic — APM + logs + metrics         │
-   │ • Dynatrace — AI-powered full observability│
-   │ • Amazon CloudWatch — AWS-native metrics   │
-   └────────────────────────────────────────────┘
-          ⬇
-     *Fully managed, scalable, easy to deploy*
-     *Best for cloud workloads and microservices*
-
-───────────────────────────────────────────────────────────────
-
-   ┌────────────────────────────────────────────┐
-   │ ⚙️ APM (APPLICATION PERFORMANCE MONITORING)│
-   ├────────────────────────────────────────────┤
-   │ • New Relic — Full-stack APM & telemetry   │
-   │ • Dynatrace — Smart baselining & root cause│
-   │ • Datadog APM — Distributed tracing & RUM  │
-   │ • AppDynamics — (often compared)           │
-   └────────────────────────────────────────────┘
-          ⬇
-     *Deep code-level performance insight*
-     *Ideal for developers and SREs*
-
-───────────────────────────────────────────────────────────────
-
-   ┌────────────────────────────────────────────┐
-   │ 🔍 SIEM & LOG ANALYTICS                    │
-   ├────────────────────────────────────────────┤
-   │ • Splunk — Enterprise log analytics & SIEM │
-   │ • Sumo Logic — Cloud-native log analytics  │
-   │ • Elastic Stack (ELK) — (often grouped here)│
-   └────────────────────────────────────────────┘
-          ⬇
-     *Security, compliance, event correlation*
-     *Best for SOCs and incident response teams*
-
-───────────────────────────────────────────────────────────────
-
-   ┌────────────────────────────────────────────┐
-   │ 🏢 INFRASTRUCTURE & NETWORK MONITORING     │
-   ├────────────────────────────────────────────┤
-   │ • SolarWinds / Orion — Enterprise IT suite │
-   │ • WhatsUp Gold — Network monitoring & maps │
-   │ • Zabbix / Nagios — Open-source alternatives│
-   └────────────────────────────────────────────┘
-          ⬇
-     *Strong for servers, routers, and SNMP data*
-     *Common in hybrid or legacy environments*
-
 ───────────────────────────────────────────────────────────────
 
    🌐 **HYBRID ECOSYSTEM TREND**
