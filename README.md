@@ -95,34 +95,60 @@ Below is a textual “map” of how the diagram should be structured. Use it as 
 
 #### Diagram Layers & Components
 
-                                       +---------------------------+
-                                       |  🌐 Executive / Ops Dashboards |
-                                       |  (Datadog UI / Dynatrace / Grafana) |
-                                       +---------------------------+
-                                                  ↓  
+                   +---------------------------------------+
+                   |  🌐 Executive / Ops Dashboards        | 
+                   |  (Datadog UI / Dynatrace / Grafana)   |
+                   +---------------------------------------+
+                                       ↓  
     ┌────────────────────────────────────────────────────────────────┐
     │                Primary Observability / APM Layer               │
     │   (Metrics, Traces, Logs, Alerts, Dashboards)                  │
     │   — Datadog or Dynatrace as “single pane of glass”             │
     └────────────────────────────────────────────────────────────────┘
        ↓                ↓                  ↓                       ↓  
-┌──────────────┐  ┌─────────────┐   ┌──────────────────┐   ┌────────────────┐  
-│  Log & SIEM  │  │  Internal /  │   │  Developer Metrics │   │  Network &     │  
-│ (Splunk /    │  │  Telemetry   │   │  / Dashboards     │   │  Infra / Cloud │  
-│  Sumo Logic) │  │  Stack       │   │  (Grafana +      │   │  Monitoring    │  
-└──────────────┘  └─────────────┘   │  Prometheus +     │   │  (Zabbix /     │  
-       ↑                ↑            │  Loki / Tempo)     │   │  SolarWinds /  │  
-       │                │            └──────────────────┘   │  CloudWatch /   │  
-       └──────────────┬──┘                      ↑             │  Azure Monitor / │  
-                      │                         │             │  GCP Ops Suite)   │  
-                      │                         └─────────────┘  
-                      │  
-                      ↓  
-            ┌──────────────────────────────────────────┐  
-            │       Hybrid Infrastructure Layer        │  
-            │ (On-Prem, VMs, Bare Metal, Kubernetes,   │  
-            │   Containers, Multi-Cloud VMs/Services)  │  
-            └──────────────────────────────────────────┘  
+┌──────────────┐  ┌─────────────┐    ┌────────────────────┐   ┌─────────────────────┐   
+│  Log & SIEM  │  │  Internal / │    │  Developer Metrics │   │  Network &          │  
+│ (Splunk /    │  │  Telemetry  │    │  / Dashboards      │   │  Infra / Cloud      │  
+│  Sumo Logic) │  │  Stack      │    │  (Grafana +        │   │  Monitoring         │  
+└──────────────┘  └─────────────┘    │  Prometheus +      │   │  (Zabbix /          │  
+      ↑                ↑             │  Loki / Tempo)     │   │  SolarWinds /       │  
+      │                │             └────────────────────┘   │  CloudWatch /       │  
+      └────────────────────────┘                       ↑      │  Azure Monitor /    │  
+                  │                            │              │  GCP Ops Suite)     │  
+                  │                            └─────────────┘  
+                  │  
+                  ↓  
+            ┌─────────────────────────────────────────┐  
+            │       Hybrid Infrastructure Layer       │  
+            │ (On-Prem, VMs, Bare Metal, Kubernetes,  │  
+            │   Containers, Multi-Cloud VMs/Services) │  
+            └─────────────────────────────────────────┘  
+
+
+# 🧩 Observability & Monitoring Tools Comparison
+
+This section provides a comparative overview of various observability and monitoring tools across multiple dimensions. Each tool is assessed based on deployment type, support for key observability features, and typical environments.
+
+| Tool / Stack                              | Deployment Type         | Open-Source | Metrics | Logs  | Traces | APM   | Security / SIEM | Typical Environment      | Notes / Strengths                              |
+|-------------------------------------------|-------------------------|-------------|---------|-------|--------|-------|-----------------|--------------------------|------------------------------------------------|
+| **Datadog**                               | SaaS                    | ❌           | ✅      | ✅    | ✅     | ✅    | ✅               | Cloud-native, hybrid      | Unified observability, great integrations      |
+| **AWS CloudWatch**                        | SaaS (AWS-native)       | ❌           | ✅      | ✅    | ⚪ (limited) | ⚪  | ⚪               | AWS environments          | Native AWS integration                        |
+| **Nagios**                                | Self-hosted             | ✅           | ✅      | ⚪    | ❌     | ⚪    | ⚪               | On-prem / hybrid          | Mature, plugin-based infrastructure monitoring |
+| **WhatsUp Gold**                          | Self-hosted             | ❌           | ✅      | ⚪    | ❌     | ⚪    | ⚪               | Mid-sized networks        | Easy GUI for network discovery                |
+| **SolarWinds / Orion**                    | Self-hosted / hybrid    | ❌           | ✅      | ⚪    | ⚪     | ✅    | ⚪               | Large enterprise IT       | Strong infrastructure and app monitoring      |
+| **Sumo Logic**                            | SaaS                    | ❌           | ⚪      | ✅    | ⚪     | ⚪    | ✅               | Cloud + security ops      | Log analytics + security insights             |
+| **Dynatrace**                             | SaaS / on-prem          | ❌           | ✅      | ✅    | ✅     | ✅    | ⚪               | Enterprise, cloud-native  | AI-driven “Davis AI” root cause engine        |
+| **Grafana + Prometheus + Loki + Tempo + OTel** | Self-hosted / hybrid    | ✅           | ✅      | ✅    | ✅     | ⚪    | ⚪               | Kubernetes / cloud-native | Fully open-source modular stack               |
+| **Splunk**                                | SaaS / on-prem          | ❌           | ⚪      | ✅    | ⚪     | ⚪    | ✅               | Enterprise IT + security  | Log analytics, SIEM powerhouse                |
+| **New Relic**                             | SaaS                    | ❌           | ✅      | ✅    | ✅     | ✅    | ⚪               | App performance & DevOps   | Developer-friendly full-stack APM             |
+| **Zabbix**                                | Self-hosted             | ✅           | ✅      | ⚪    | ❌     | ⚪    | ⚪               | Infrastructure & network   | Free, customizable infrastructure monitoring  |
+
+---
+
+### Legend:
+- ✅ = Strong / native support
+- ⚪ = Partial / limited support
+- ❌ = Not supported
 
 ### 🚦 Data Flows / Arrows & Annotations
 
@@ -166,7 +192,7 @@ Here’s how each of the tools stacks up approximately on those dimensions:
 
 
 | Tool                                                                                   | Strengths / Advantages                                                                                                                                                                                           | Weaknesses / Trade‑offs                                                                                                                                                                                                                                                                                                                                                                          |
-| -------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| -------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Dynatrace**                                                                          | Very strong full‑stack observability; good at automatic discovery, dependency mapping; strong AI / automation (root cause analysis). Works well in complex environments (multi‑cloud + on‑prem). ([PeerSpot][1]) | Premium cost; complexity in configuration for maximum value; learning curve; some parts may overkill for simpler environments. ([TechRadar][2])                                                                                                                                                                                                                                                  |
 | **Datadog**                                                                            | Rich integrations; modular features (APM, logs, infra etc); relatively fast to get going; SaaS model scales; good observability suite. ([PeerSpot][1])                                                           | Can get expensive when scale is large; complexity in cost / licensing; possibly less automatic in dependency mapping vs Dynatrace; managing many agents/configs across on‑prem can add overhead. ([eWeek][3])                                                                                                                                                                                    |
 | **Splunk (Enterprise + Cloud)**                                                        | Very powerful search / analytics, strong in log/event volumes, mature product; many enterprise features (security, audit, compliance); can do on‑prem and cloud.                                                 | Historically strong but expensive; licensing cost + infrastructure cost especially on‑prem; sometimes siloed products; search performance / scale must be carefully engineered; vendor can be less nimble.                                                                                                                                                                                       |
