@@ -22,6 +22,100 @@ It’s used by IT administrators to monitor the health, performance, and availab
 - To plan capacity and troubleshoot faster using real-time metrics.
 - To centralize monitoring of diverse systems (on-premise, virtual, or cloud).
 
+# 🛰️ WhatsUp Gold Monitoring Architecture
+
+This document provides a high-level overview of the **WhatsUp Gold (WUG)** monitoring architecture, its core components, and data flow across different layers.
+
+---
+
+## 🏗️ Diagram Layers & Components
+
+### 1. **User & Management Layer**
+
+👤 **IT Admin / NOC Console**
+- Accesses the **WhatsUp Gold Web Dashboard**
+- Receives alerts via **Email**, **SMS**, or **Web notifications**
+- Manages monitored devices and views performance metrics
+
+---
+
+### 2. **WhatsUp Gold Core System**
+
+💻 **WhatsUp Gold Server**
+- Central monitoring and management engine  
+- Polling engine supports **SNMP**, **WMI**, and **SSH** protocols  
+- Includes **Alerting**, **Reporting**, and **Discovery** modules
+
+🗄️ **SQL Database**
+- Stores device configurations, status, logs, and performance data  
+- Used for reporting and historical trend analysis
+
+🔄 **Flow Monitor / Log Management Add-ons**
+- Collects **NetFlow/sFlow/jFlow** traffic data  
+- Parses **Syslogs** and **Windows Event Logs** for anomaly detection
+
+---
+
+### 3. **Network Layer**
+
+🌐 **Core Network Devices**
+- Includes **Routers**, **Switches**, and **Firewalls**  
+- Monitored using **SNMP**, **ICMP**, and **Syslog**
+
+🖥️ **Servers**
+- **Windows/Linux** servers monitored via **WMI/SSH**  
+- Tracks CPU, Memory, Disk, and Service status
+
+📦 **Applications**
+- Monitors **Web**, **Mail**, **Database**, and **Custom** applications  
+- Ensures application uptime and performance
+
+☁️ **Cloud Services (Optional)**
+- Integrates with **Azure** and **AWS** via APIs  
+- Tracks virtual machine and service availability
+
+---
+
+### 4. **Notification & Integration Layer**
+
+🔔 **Alert Notifications**
+- Supports **Email**, **SMS**, **Slack**, and **Webhook-based** alerts  
+- Configurable thresholds and escalation policies
+
+🔗 **Integrations**
+- Integrates with **ServiceNow**, **Microsoft Teams**, and **REST APIs**  
+- Enables automated incident management and workflow integration
+
+---
+
+### 🎨 **Visual & Color Plan**
+| Layer | Color | Description |
+|--------|--------|-------------|
+| User & Management | 🟦 Blue | Dashboards, Alerts, and Access |
+| Core System | 🟩 Green | WUG Server, Database, and Polling Engines |
+| Network Layer | 🟨 Yellow | Devices, Servers, and Applications |
+| Notification Layer | 🟧 Orange | Alerts and Integrations |
+
+---
+
+## 📊 Example Architecture Diagram (Conceptual)
+
+[ IT Admin / Web UI ]
+│
+▼
+[ WhatsUp Gold Server ]
+├── Polling Engine (SNMP/WMI/SSH)
+├── Alerting & Reporting
+├── SQL Database
+└── Flow & Log Add-ons
+│
+▼
+[ Network Devices | Servers | Apps | Cloud ]
+│
+▼
+[ Notifications & Integrations (Email, Slack, ServiceNow) ]
+
+
 ### 🧩 Architecture / Network Diagram Explanation
 
 Here’s a simplified architecture diagram of how WhatsUp Gold works:
