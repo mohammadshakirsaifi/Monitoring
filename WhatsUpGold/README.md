@@ -1,6 +1,6 @@
 # WhatsUp Gold Monitoring Tools 
 
-![](photos/WhatsUpGold/dashboard.jpg)
+![](../photos/WhatsUpGold/dashboard.jpg)
 
 
 ## Simple, Integrated Log Management & Archiving
@@ -11,27 +11,27 @@
 
 ### Network Availability and Performance Monitoring
 - **WhatsUp Gold is a comprehensive set of network monitoring tools designed for both on-premises and cloud environments.**
-![](photos/WhatsUpGold/NA.jpg)
+![](../photos/WhatsUpGold/NA.jpg)
 ---
 
 ## Intelligent IT Infrastructure Monitoring with WhatsUp Gold
-![](photos/WhatsUpGold/Model.jpg)
+![](../photos/WhatsUpGold/Model.jpg)
 ---
 
 ### More Than Just Network Monitoring Software
 ##### Discover Your Network
 - **WhatsUp Gold’s powerful layer 2/3 discovery results in a detailed interactive map of your entire networked infrastructure. Monitor and map everything from the edge to the cloud including devices, wireless controllers, servers, virtual machines, applications, traffic flows and configurations across Windows, LAMP and Java environments.**
-![](photos/WhatsUpGold/network-discovery.jpg)
+![](../photos/WhatsUpGold/network-discovery.jpg)
 ---
 
 ##### Get Real-time Alerts
 - **Ensure optimal performance and availability to meet or beat SLAs. Manage networks, traffic, physical servers, VMs and applications with easy-to-use and customizable maps, dashboards and alerts. Click on any device in WhatsUp Gold to get immediate access to a wealth of related network monitoring settings and reports.**
-![](photos/WhatsUpGold/real-time.jpg)
+![](../photos/WhatsUpGold/real-time.jpg)
 ---
 
 ##### Resolve Issues Quickly
 - **Intuitive workflows and easy customization help you reduce MTTRs. WhatsUp Gold streamlines network monitoring workflows by letting you initiate management tools directly from the interactive map. Easily switch between physical, virtual, wireless and dependency views to resolve issues quickly.**
-![](photos/WhatsUpGold/resolve-issues.jpg)
+![](../photos/WhatsUpGold/resolve-issues.jpg)
 ---
 
 #### Discover, Map and Monitor Your Network Devices in Minutes with the Network Discovery Tool by WhatsUp Gold
@@ -42,12 +42,12 @@
   
 ### Discover Devices On Your Network
 - **The WhatsUp Gold's Network Discovery Software uses a number of innovative Layer 2/3 discovery technologies - including ARP, SNMP, SSH, Virtual Infrastructure Management, IP addressing, ICMP and LLDP in combination with vendor-proprietary mechanisms - to discover everything connected to your network and build a complete and accurate picture of network devices and their port-to-port connectivity.. Full or partial discoveries can be scheduled to run automatically or run on-demand.**
-![](photos/WhatsUpGold/discovered-devices.jpg)
+![](../photos/WhatsUpGold/discovered-devices.jpg)
 ---
 
 ### Visualize with Network Maps
 - **The WhatsUp Gold Network Discovery Tool auto-generates integrated Layer 2 and 3 network maps that give you full visibility into physical, logical, and virtual connectivity, including IP and VLAN-specific information. It dynamically updates its maps as changes occur in the network. Maps are easy to customize and manipulate so you can view your network the way you want.**
-![](photos/WhatsUpGold/network-map.jpg)
+![](../photos/WhatsUpGold/network-map.jpg)
 ---
 
 ### Assign Device Roles and Dependencies
