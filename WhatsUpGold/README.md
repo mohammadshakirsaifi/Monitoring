@@ -89,12 +89,13 @@ This document provides a high-level overview of the **WhatsUp Gold (WUG)** monit
 ---
 
 ### 🎨 **Visual & Color Plan**
-| Layer | Color | Description |
-|--------|--------|-------------|
-| User & Management | 🟦 Blue | Dashboards, Alerts, and Access |
-| Core System | 🟩 Green | WUG Server, Database, and Polling Engines |
-| Network Layer | 🟨 Yellow | Devices, Servers, and Applications |
-| Notification Layer | 🟧 Orange | Alerts and Integrations |
+
+| **Layer**              | **Color** | **Key Components**                                    | **Icon Style**                      | **Description**                                                                             |
+| ---------------------- | --------- | ----------------------------------------------------- | ----------------------------------- | ------------------------------------------------------------------------------------------- |
+| **User & Management**  | 🟦 Blue   | 👤 **Admin**                                          | User icon                           | Dashboards, Alerts, and Access control for administrators and users.                        |
+| **Core System**        | 🟩 Green  | 🖥️ **WhatsUp Gold Server**, 🗄️ **Database**         | Server & Cylinder icons             | Core backend: WUG Server, Database, and Polling Engines managing performance and data.      |
+| **Network Layer**      | 🟨 Yellow | 🌐 **Network Devices**, 🖥️ **Servers**, ☁️ **Cloud** | Router/Switch, Server & Cloud icons | Network infrastructure layer: devices, on-prem servers, and cloud systems under monitoring. |
+| **Notification Layer** | 🟧 Orange | 🔔 **Alerts**                                         | Bell icon                           | Notifications, alerts, and integrations for real-time event management.                     |
 
 ---
 
