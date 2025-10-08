@@ -91,19 +91,14 @@ Each tool focuses on one or more of these pillars and may offer alerting, dashbo
 ##### Here’s a comparative breakdown of the listed tools (Datadog, CloudWatch, Nagios, WhatsUp Gold, SolarWinds/Orion, Sumo Logic, Dynatrace, Grafana+Prometheus+OTel/Loki/Tempo stack, Splunk, New Relic), focusing on their strengths & trade‑offs, and then what would tend to make the “best” choice for a large enterprise that has both multi-cloud and on‑premise needs. If you want, I can also score them (cost, performance, features etc) for your specific constraints.
 
 ### 🏗️ Architecture Diagram — Observability in a Hybrid / Multi-Cloud Enterprise
-![](photos/1- unified-observability.png)
-![](photos/2-deep-application-observability-on-aws.png)
-![](photos/3- Observability-Pipeline---Architectural-Overview.png)
-
 Below is a textual “map” of how the diagram should be structured. Use it as a guide to layout shapes, arrows, and tool icons.
-
-
-
+![](photos/1-unified-observability.png)
+![](photos/2-deep-application-observability-on-aws.png)
+![](photos/3-Observability-Pipeline---Architectural-Overview.png)
+![](photos/4-observability_pipeline.png)
+![](photos/5.png)
 
 #### Diagram Layers & Components
-
-
-
 # 🧩 Observability & Monitoring Tools Comparison
 ![Observability & Monitoring Tools Comparison](photos/ToolsComparison.jpg)
 
