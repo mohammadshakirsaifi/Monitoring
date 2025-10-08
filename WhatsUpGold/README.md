@@ -150,6 +150,23 @@ Here’s a simplified architecture diagram of how WhatsUp Gold works:
  │ Switches, etc│  │              │  │              │
  └──────────────┘  └──────────────┘  └──────────────┘
 
+# 🧩 WhatsUp Gold Architecture Overview (
+
+| **Layer** | **Diagram** | **Description** |
+|------------|--------------|-----------------|
+| **1. User Interface Layer** | ``` ┌─────────────────────────────┐ │       User Interface        │ │   (Web Console / Mobile App)│ └─────────────┬───────────────┘ ``` | - Centralized dashboard for IT administrators.<br>- Accessible via **web**, **mobile**, or **desktop**.<br>- Provides visibility, configuration, and reporting. |
+| **2. Application Core Layer** | ``` ┌─────────────▼──────────────┐ │     WhatsUp Gold Server     │ │   (Core Engine & Database)  │ ├────────────────────────────┤ │  Discovery Services         │ │  Monitoring Services        │ │  Alerting & Reporting       │ └─────────────┬──────────────┘ ``` | - **Core Engine:** Manages data collection, device communication, and alerts.<br>- **Discovery Services:** Automatically detects devices (SNMP, WMI, SSH).<br>- **Monitoring Services:** Tracks uptime, CPU, memory, and network metrics.<br>- **Alerting & Reporting:** Generates notifications and reports.<br>- **Database:** SQL-based storage for configurations and history. |
+| **3. Infrastructure Layer** | ``` ┌────────────────┼────────────────┐ │                │                │ ┌──────────────┐ ┌──────────────┐ ┌──────────────┐ │ Network       │ │   Servers    │ │  Cloud Apps  │ │ Devices       │ │ (Web, DB)    │ │ (AWS, Azure) │ │ (Routers,     │ │              │ │  SaaS APIs)  │ │ Switches, etc)│ │              │ │              │ └──────────────┘ └──────────────┘ └──────────────┘ ``` | - **Network Devices:** Routers, switches, firewalls, IoT, etc.<br>- **Servers:** On-prem systems monitored via SNMP, WMI, or SSH.<br>- **Cloud Apps:** AWS, Azure, SaaS apps via APIs. |
+| **4. Notification & Integration Layer** | ``` ┌───────────────────────────────┐ │ Notifications & Integrations  │ │ (Email, Slack, ServiceNow, etc)│ └───────────────────────────────┘ ``` | - **Notifications:** Email, SMS, Slack, and Teams alerts.<br>- **Integrations:** Connects with ServiceNow, Jira, and other ITSM tools.<br>- Automates workflows and incident escalation. |
+| **🧠 Summary** | ``` User Interface │ ▼ WhatsUp Gold Server │ ▼ Discovery / Monitoring / Reporting │ ▼ Network Devices / Servers / Cloud Apps │ ▼ Notifications & Integrations ``` | End-to-end network monitoring stack linking **users → monitoring engine → infrastructure → notifications**. |
+
+---
+
+💡 *Tip:*  
+You can embed your architecture diagram image below the table:
+```markdown
+![WhatsUp Gold Architecture Diagram](whatsupgold-architecture.png)
+
 ### 🧩 WhatsUp Gold Architecture Overview
 #### 1. User Interface Layer
 ┌─────────────────────────────┐
