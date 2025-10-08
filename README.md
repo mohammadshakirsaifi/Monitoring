@@ -126,22 +126,7 @@ Below is a textual “map” of how the diagram should be structured. Use it as 
 
 
 # 🧩 Observability & Monitoring Tools Comparison
-
-This section provides a comparative overview of various observability and monitoring tools across multiple dimensions. Each tool is assessed based on deployment type, support for key observability features, and typical environments.
-
-| Tool / Stack                                   | Deployment Type         | Open-Source | Metrics  | Logs  | Traces        | APM   | Security / SIEM | Typical Environment       | Notes / Strengths                              |
-|------------------------------------------------|-------------------------|-------------|----------|-------|---------------|-------|-----------------|---------------------------|------------------------------------------------|
-| **Datadog**                                    | SaaS                    | ❌          | ✅      | ✅    | ✅           | ✅    | ✅             | Cloud-native, hybrid      | Unified observability, great integrations      |
-| **AWS CloudWatch**                             | SaaS (AWS-native)       | ❌          | ✅      | ✅    | ⚪ (limited) | ⚪    | ⚪             | AWS environments          | Native AWS integration                         |
-| **Nagios**                                     | Self-hosted             | ✅          | ✅      | ⚪    | ❌           | ⚪    | ⚪             | On-prem / hybrid          | Mature, plugin-based infrastructure monitoring |
-| **WhatsUp Gold**                               | Self-hosted             | ❌          | ✅      | ⚪    | ❌           | ⚪    | ⚪             | Mid-sized networks        | Easy GUI for network discovery                 |
-| **SolarWinds / Orion**                         | Self-hosted / hybrid    | ❌          | ✅      | ⚪    | ⚪           | ✅    | ⚪             | Large enterprise IT       | Strong infrastructure and app monitoring       |
-| **Sumo Logic**                                 | SaaS                    | ❌          | ⚪      | ✅    | ⚪           | ⚪    | ✅             | Cloud + security ops      | Log analytics + security insights              |
-| **Dynatrace**                                  | SaaS / on-prem          | ❌          | ✅      | ✅    | ✅           | ✅    | ⚪             | Enterprise, cloud-native  | AI-driven “Davis AI” root cause engine         |
-| **Grafana + Prometheus + Loki + Tempo + OTel** | Self-hosted / hybrid    | ✅          | ✅      | ✅    | ✅           | ⚪    | ⚪             | Kubernetes / cloud-native | Fully open-source modular stack                |
-| **Splunk**                                     | SaaS / on-prem          | ❌          | ⚪      | ✅    | ⚪           | ⚪    | ✅             | Enterprise IT + security  | Log analytics, SIEM powerhouse                 |
-| **New Relic**                                  | SaaS                    | ❌          | ✅      | ✅    | ✅           | ✅    | ⚪             | App performance & DevOps  | Developer-friendly full-stack APM              |
-| **Zabbix**                                     | Self-hosted             | ✅          | ✅      | ⚪    | ❌           | ⚪    | ⚪             | Infrastructure & network  | Free, customizable infrastructure monitoring   |
+![Observability & Monitoring Tools Comparison](photos/ToolsComparison.jpg)
 
 ---
 
