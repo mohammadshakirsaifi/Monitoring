@@ -440,18 +440,18 @@ To keep the ecosystem sustainable and efficient:
 
 ### 3. Summary Architecture Example
 
-+------------------------------------------------------------------------------+
-|                      Executive / Ops Dashboards                             |
-|                 (Grafana / Datadog / Dynatrace)                             |
-+------------------------------------------------------------------------------+
-|  Application Metrics  |  Traces  |  Logs  |  Security Events                |
-|   (Prometheus)        | (OTel)   | (Loki) | (Splunk / Sumo)                 |
-+------------------------------------------------------------------------------+
-|   Cloud-Native Metrics  |  Network / Infra Metrics  |  Alerts               |
-| (CloudWatch, AzureMon)  | (Zabbix, SolarWinds)      | (PagerDuty, Opsgenie) |
-+------------------------------------------------------------------------------+
-|         On-Prem / Cloud Workloads / Kubernetes / VMs                        |
-+------------------------------------------------------------------------------+
+| **Category**                                   | **Tool/Platform**                             | **Description**                             | **Typical Use**                            | **Strength**                                 |
+|------------------------------------------------|----------------------------------------------|---------------------------------------------|--------------------------------------------|---------------------------------------------|
+| **Executive / Ops Dashboards**                 | **Grafana / Datadog / Dynatrace**             | Unified observability dashboards            | Real-time performance and health monitoring | Comprehensive views across multiple domains |
+| **Application Metrics**                        | **Prometheus**                               | Metrics collection and alerting             | Application and infrastructure metrics     | Scalable, time-series based monitoring      |
+| **Traces**                                     | **OpenTelemetry (OTel)**                     | Distributed tracing                         | Application performance and root cause analysis | Open standard, vendor-neutral               |
+| **Logs**                                       | **Loki**                                     | Log aggregation                             | Centralized log management and querying    | Efficient, cost-effective log storage       |
+| **Security Events**                            | **Splunk / Sumo Logic**                      | Enterprise-level SIEM                       | Security event monitoring and compliance   | Scalable search, alerting, and correlation  |
+| **Cloud-Native Metrics**                       | **CloudWatch / AzureMon**                    | Cloud-native monitoring                     | Cloud infrastructure and application monitoring | Seamless integration with cloud providers  |
+| **Network / Infra Metrics**                    | **Zabbix / SolarWinds**                      | Infrastructure and network monitoring       | Servers, routers, and network devices      | Broad support for various devices and protocols |
+| **Alerts**                                     | **PagerDuty / Opsgenie**                     | Incident management and alerting            | Critical alert notifications               | Real-time, actionable alerting              |
+| **On-Prem / Cloud Workloads / Kubernetes / VMs**| **Combined Stack**                           | Full observability stack (e.g., Grafana + Prometheus + CloudWatch) | Hybrid or cloud-native environments        | Flexibility, cross-platform integration     |
+
 
 
 ### ✅ 4. Final Recommendation Summary
