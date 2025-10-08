@@ -126,6 +126,7 @@ This document provides a high-level overview of the **WhatsUp Gold (WUG)** monit
 ### 🧩 Architecture / Network Diagram Explanation
 
 Here’s a simplified architecture diagram of how WhatsUp Gold works:
+```markdown
             ┌─────────────────────────────┐
             │       User Interface        │
             │ (Web Console / Mobile App)  │
@@ -149,7 +150,7 @@ Here’s a simplified architecture diagram of how WhatsUp Gold works:
  │ (Routers,    │  │              │  │              │
  │ Switches, etc│  │              │  │              │
  └──────────────┘  └──────────────┘  └──────────────┘
-
+```
 # 🧩 WhatsUp Gold Architecture Overview (
 
 | **Layer** | **Diagram** | **Description** |
@@ -166,9 +167,10 @@ Here’s a simplified architecture diagram of how WhatsUp Gold works:
 You can embed your architecture diagram image below the table:
 ```markdown
 ![WhatsUp Gold Architecture Diagram](whatsupgold-architecture.png)
-
+```
 ### 🧩 WhatsUp Gold Architecture Overview
 #### 1. User Interface Layer
+```markdown
 ┌─────────────────────────────┐
 │        User Interface       │
 │   (Web Console / Mobile App)│
@@ -176,8 +178,9 @@ You can embed your architecture diagram image below the table:
 - **Purpose:** Provides a centralized dashboard for IT admins to view network status, configure monitoring, and manage alerts.
 - **Users:** Network administrators and IT operators.
 - **Access Methods:** Web browser, mobile app, or desktop client.
-
+```
 #### 2. Application Core Layer
+```markdown
 ┌─────────────▼──────────────┐
 │     WhatsUp Gold Server     │
 │   (Core Engine & Database)  │
@@ -191,8 +194,9 @@ You can embed your architecture diagram image below the table:
 - Monitoring Services: Continuously polls metrics such as uptime, bandwidth, and CPU/memory.
 - Alerting & Reporting: Sends alerts via email, SMS, Slack, or ServiceNow and generates reports for analysis.
 - Database (SQL): Stores configuration, performance, and historical data for analysis and reporting.
-
+```
 #### 3. Infrastructure Layer
+```markdown
 ┌────────────────┼────────────────┐
 │                │                │
 ┌──────────────┐ ┌──────────────┐ ┌──────────────┐
@@ -204,14 +208,17 @@ You can embed your architecture diagram image below the table:
 - Network Devices: Routers, switches, firewalls, printers, and IoT devices monitored via SNMP/ICMP.
 - Servers: On-prem Windows/Linux servers monitored via WMI/SSH.
 - Cloud & Virtual: Cloud services (AWS, Azure, Google Cloud) and VMs monitored through APIs and integrations.
-
+```
 #### 4. Notification & Integration Layer
+```markdown
 ┌───────────────────────────────┐
 │ Notifications & Integrations  │
 │ (Email, Slack, ServiceNow, etc)│
 └───────────────────────────────┘
 - Alerts: Configurable notifications for performance thresholds and outages.
 - Integrations: Connects with ITSM tools (ServiceNow, Jira), collaboration apps (Slack, Teams), and automation workflows.
+```
+---
 
 ![](../photos/WhatsUpGold/dashboard.jpg)
 
