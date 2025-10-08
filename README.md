@@ -370,64 +370,33 @@ To keep the ecosystem sustainable and efficient:
 - Best for AWS-native users → CloudWatch
 
 ### 🧭 2. Observability & Monitoring Tools Landscape
-| ----------------------------------------------------------------|
-│                   🌍 OBSERVABILITY LANDSCAPE                  │
-├───────────────────────────────────────────────────────────────┤
-│                                                               │
-│  🟢  OPEN-SOURCE STACK                                        │
-│  ───────────────────────────────                              │
-│  • Grafana — visualization & dashboards                       │
-│  • Prometheus — metrics collection & alerting                 │
-│  • Loki — log aggregation (by Grafana Labs)                   │
-│  • Tempo — distributed tracing (by Grafana Labs)              │
-│  • OpenTelemetry (OTel) — instrumentation standard            │
-│  • Zabbix — infrastructure monitoring                         │
-│  • Nagios — plugin-based IT monitoring                        │
-│                                                               │
-│    🔁 Typical Use: Cloud-native observability, self-managed  │
-│    💡 Strength: Open standards, extensible, cost-effective   │
-│                                                               │
-├───────────────────────────────────────────────────────────────┤
-│  ☁️  SAAS & CLOUD-NATIVE OBSERVABILITY PLATFORMS              │
-│  ────────────────────────────────────────                     │
-│  • Datadog — unified metrics, logs, traces, security          │
-│  • New Relic — full-stack APM and telemetry                   │
-│  • Dynatrace — AI-driven observability (“Davis AI”)           │
-│  • Amazon CloudWatch — AWS-native monitoring and logging      │
-│                                                               │
-│    🔁 Typical Use: Cloud and Kubernetes environments            │
-│    💡 Strength: Quick setup, automatic integrations, scalability│
-│                                                               │
-├───────────────────────────────────────────────────────────────┤
-│  🏢  ENTERPRISE IT MONITORING SUITES                           │
-│  ──────────────────────────────────────────                    │
-│  • SolarWinds / Orion Platform — deep network & server visibility │
-│  • WhatsUp Gold — network discovery and SNMP monitoring         │
-│                                                               │
-│    🔁 Typical Use: On-premises or hybrid enterprise networks    │
-│    💡 Strength: Broad infrastructure coverage, legacy-friendly  │
-│                                                               │
-├───────────────────────────────────────────────────────────────┤
-│  🔍  LOG ANALYTICS & SECURITY (SIEM FOCUS)                     │
-│  ──────────────────────────────────────────                    │
-│  • Splunk — enterprise log analytics & SIEM                    │
-│  • Sumo Logic — cloud-native log and security analytics         │
-│                                                               │
-│    🔁 Typical Use: Security monitoring, compliance, log analysis│
-│    💡 Strength: Scalable search, correlation, and alerting      │
-│                                                               │
-├───────────────────────────────────────────────────────────────┤
-│  ⚙️  HYBRID & INTEGRATED ENVIRONMENTS                         │
-│  ────────────────────────────────────────────                  │
-│  • Combine open-source (Grafana/Prometheus) with SaaS tools     │
-│  • Use OTel to instrument apps → send data to Datadog, Splunk, etc. │
-│  • Typical mix: AWS CloudWatch + Grafana + Splunk integration   │
-│                                                               │
-│    🔁 Typical Use: Enterprises moving from legacy to cloud-native│
-│    💡 Strength: Flexibility, vendor-neutral observability layer │
-│                                                               │
-└───────────────────────────────────────────────────────────────┘
----
+| **Category** | **Tool/Platform** | **Description** | **Typical Use** | **Strength** |
+|--------------|-------------------|-----------------|-----------------|--------------|
+| 🌍 **OBSERVABILITY LANDSCAPE** |  |  |  |  |
+| **🟢 OPEN-SOURCE STACK** | | | Cloud-native observability, self-managed | Open standards, extensible, cost-effective |
+| | **Grafana** | Visualization & dashboards | | |
+| | **Prometheus** | Metrics collection & alerting | | |
+| | **Loki** | Log aggregation (by Grafana Labs) | | |
+| | **Tempo** | Distributed tracing (by Grafana Labs) | | |
+| | **OpenTelemetry (OTel)** | Instrumentation standard | | |
+| | **Zabbix** | Infrastructure monitoring | | |
+| | **Nagios** | Plugin-based IT monitoring | | |
+| **☁️ SAAS & CLOUD-NATIVE OBSERVABILITY PLATFORMS** | | | Cloud & Kubernetes environments | Quick setup, automatic integrations, scalability |
+| | **Datadog** | Unified metrics, logs, traces, security | | |
+| | **New Relic** | Full-stack APM and telemetry | | |
+| | **Dynatrace** | AI-driven observability (“Davis AI”) | | |
+| | **Amazon CloudWatch** | AWS-native monitoring & logging | | |
+| **🏢 ENTERPRISE IT MONITORING SUITES** | | | On-premises or hybrid enterprise networks | Broad infrastructure coverage, legacy-friendly |
+| | **SolarWinds / Orion Platform** | Deep network & server visibility | | |
+| | **WhatsUp Gold** | Network discovery and SNMP monitoring | | |
+| **🔍 LOG ANALYTICS & SECURITY (SIEM FOCUS)** | | | Security monitoring, compliance, log analysis | Scalable search, correlation, and alerting |
+| | **Splunk** | Enterprise log analytics & SIEM | | |
+| | **Sumo Logic** | Cloud-native log and security analytics | | |
+| **⚙️ HYBRID & INTEGRATED ENVIRONMENTS** | | | Enterprises moving from legacy to cloud-native | Flexibility, vendor-neutral observability layer |
+| | **Combination** | Open-source (Grafana/Prometheus) with SaaS tools | | |
+| | **OpenTelemetry Integration** | Instrument apps → send data to Datadog, Splunk, etc. | | |
+| | **Typical Mix** | AWS CloudWatch + Grafana + Splunk integration | | |
+
 
 ### 🧠  Key Insights
 
