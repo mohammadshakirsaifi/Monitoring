@@ -416,6 +416,8 @@ To keep the ecosystem sustainable and efficient:
 - Enterprise IT tools (SolarWinds, WhatsUp Gold) → ideal for legacy + network-heavy environments.
 - Log/SIEM tools (Splunk, Sumo Logic) → focus on log analytics, compliance, and security insights.
 - Hybrid approach → most organizations blend these layers for complete observability.
+
+   ![](photos/t.jpg)
 ───────────────────────────────────────────────────────────────
 
    🌐 **HYBRID ECOSYSTEM TREND**
