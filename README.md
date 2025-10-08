@@ -11,52 +11,52 @@ All of these tools deal with observability, which has three pillars:
 Each tool focuses on one or more of these pillars and may offer alerting, dashboards, and automation.
 
 ### 🧩 Detailed Breakdown
-##### 1. Datadog
+#### 1. Datadog
 - Type: Cloud-based observability platform (SaaS)
 - Features: Metrics, logs, traces, security monitoring, APM, synthetic tests
 - Strengths: Easy integrations (AWS, Kubernetes, etc.), great UI, unified observability
 - Use case: Cloud-native environments and microservices
 
-##### 2. Amazon CloudWatch
+#### 2. Amazon CloudWatch
 
 - Type: AWS-native monitoring and logging service
 - Features: Collects metrics and logs from AWS resources, creates dashboards, alarms
 - Strengths: Tight integration with AWS ecosystem, serverless-ready
 - Use case: AWS workloads (EC2, Lambda, ECS, etc.)
 
-##### 3. Nagios
+#### 3. Nagios
 - Type: Open-source monitoring system (mainly infrastructure and services)
 - Features: Host/service checks, alerts, plugins, graphing (via add-ons)
 - Strengths: Mature, flexible, large plugin ecosystem
 - Weakness: Manual setup, less modern UI
 - Use case: Traditional IT monitoring (servers, switches, applications)
 
-##### 4. WhatsUp Gold
+#### 4. WhatsUp Gold
 - Type: Commercial network monitoring tool by Progress Software
 - Features: Network device discovery, topology maps, SNMP monitoring, alerts
 - Strengths: Easy-to-use GUI, good for mid-sized organizations
 - Use case: Network infrastructure monitoring
 
-#####5. SolarWinds / Orion Platform
+#### 5. SolarWinds / Orion Platform
 - Type: Enterprise IT monitoring suite
 - Features: Network, server, application, and database monitoring
 - Strengths: Strong for on-premises environments, powerful dashboards
 - Note: “Orion” is the underlying platform that unifies SolarWinds modules
 - Use case: Large IT infrastructures with mixed environments
 
-##### 6. Sumo Logic
+#### 6. Sumo Logic
 - Type: Cloud-native log analytics and security intelligence platform
 - Features: Log aggregation, analytics, dashboards, security insights
 - Strengths: SaaS-based, integrates with cloud and CI/CD tools
 - Use case: Log analysis and security monitoring (SIEM-lite)
 
-##### 7. Dynatrace
+#### 7. Dynatrace
 - Type: AI-powered full-stack observability platform
 - Features: Metrics, logs, traces, application performance monitoring (APM), infra monitoring
 - Strengths: Deep AI correlation (“Davis AI”), auto-discovery of dependencies
 - Use case: Enterprise-grade APM and cloud-native observability
 
-##### 8. Grafana + Prometheus + OTel/Loki/Tempo Stack
+#### 8. Grafana + Prometheus + OTel/Loki/Tempo Stack
 - Type: Open-source observability stack
 - Components:
   - Prometheus → Metrics collection and alerting
@@ -67,20 +67,20 @@ Each tool focuses on one or more of these pillars and may offer alerting, dashbo
 - Strengths: Open, modular, highly customizable
 - Use case: Cloud-native monitoring with open standards
 
-##### 9. Splunk
+#### 9. Splunk
 - Type: Enterprise data analytics and logging platform
 - Features: Log ingestion, search (SPL query language), dashboards, SIEM capabilities
 - Strengths: Powerful search and analytics, enterprise scalability
 - Weakness: Can be expensive
 - Use case: Log analytics, security (Splunk Enterprise Security), and compliance
 
-##### 10. New Relic
+#### 10. New Relic
 - Type: Cloud-based APM and observability platform
 - Features: Application monitoring, metrics, traces, logs, browser and mobile performance
 - Strengths: Developer-friendly, real-time data, modern UI
 - Use case: Full-stack observability for DevOps and app teams
 
-##### 11. Zabbix
+#### 11. Zabbix
 - Type: Open-source monitoring platform
 - Features: Metrics collection via agents, SNMP, dashboards, alerting
 - Strengths: Free, scalable, customizable
@@ -88,7 +88,7 @@ Each tool focuses on one or more of these pillars and may offer alerting, dashbo
 - Use case: Infrastructure and network monitoring
 
 
-###### Here’s a comparative breakdown of the listed tools (Datadog, CloudWatch, Nagios, WhatsUp Gold, SolarWinds/Orion, Sumo Logic, Dynatrace, Grafana+Prometheus+OTel/Loki/Tempo stack, Splunk, New Relic), focusing on their strengths & trade‑offs, and then what would tend to make the “best” choice for a large enterprise that has both multi-cloud and on‑premise needs. If you want, I can also score them (cost, performance, features etc) for your specific constraints.
+##### Here’s a comparative breakdown of the listed tools (Datadog, CloudWatch, Nagios, WhatsUp Gold, SolarWinds/Orion, Sumo Logic, Dynatrace, Grafana+Prometheus+OTel/Loki/Tempo stack, Splunk, New Relic), focusing on their strengths & trade‑offs, and then what would tend to make the “best” choice for a large enterprise that has both multi-cloud and on‑premise needs. If you want, I can also score them (cost, performance, features etc) for your specific constraints.
 
 ### 🏗️ Architecture Diagram — Observability in a Hybrid / Multi-Cloud Enterprise
 Below is a textual “map” of how the diagram should be structured. Use it as a guide to layout shapes, arrows, and tool icons.
@@ -105,8 +105,8 @@ Below is a textual “map” of how the diagram should be structured. Use it as 
     │   (Metrics, Traces, Logs, Alerts, Dashboards)                  │
     │   — Datadog or Dynatrace as “single pane of glass”             │
     └────────────────────────────────────────────────────────────────┘
-       ↓                ↓                  ↓                       ↓  
-┌──────────────┐  ┌─────────────┐    ┌────────────────────┐   ┌─────────────────────┐   
+      ↓                ↓                  ↓                       ↓  
+┌─────────────┐  ┌─────────────┐    ┌────────────────────┐   ┌─────────────────────┐   
 │  Log & SIEM  │  │  Internal / │    │  Developer Metrics │   │  Network &          │  
 │ (Splunk /    │  │  Telemetry  │    │  / Dashboards      │   │  Infra / Cloud      │  
 │  Sumo Logic) │  │  Stack      │    │  (Grafana +        │   │  Monitoring         │  
@@ -129,19 +129,19 @@ Below is a textual “map” of how the diagram should be structured. Use it as 
 
 This section provides a comparative overview of various observability and monitoring tools across multiple dimensions. Each tool is assessed based on deployment type, support for key observability features, and typical environments.
 
-| Tool / Stack                              | Deployment Type         | Open-Source | Metrics | Logs  | Traces | APM   | Security / SIEM | Typical Environment      | Notes / Strengths                              |
-|-------------------------------------------|-------------------------|-------------|---------|-------|--------|-------|-----------------|--------------------------|------------------------------------------------|
-| **Datadog**                               | SaaS                    | ❌           | ✅      | ✅    | ✅     | ✅    | ✅               | Cloud-native, hybrid      | Unified observability, great integrations      |
-| **AWS CloudWatch**                        | SaaS (AWS-native)       | ❌           | ✅      | ✅    | ⚪ (limited) | ⚪  | ⚪               | AWS environments          | Native AWS integration                        |
-| **Nagios**                                | Self-hosted             | ✅           | ✅      | ⚪    | ❌     | ⚪    | ⚪               | On-prem / hybrid          | Mature, plugin-based infrastructure monitoring |
-| **WhatsUp Gold**                          | Self-hosted             | ❌           | ✅      | ⚪    | ❌     | ⚪    | ⚪               | Mid-sized networks        | Easy GUI for network discovery                |
-| **SolarWinds / Orion**                    | Self-hosted / hybrid    | ❌           | ✅      | ⚪    | ⚪     | ✅    | ⚪               | Large enterprise IT       | Strong infrastructure and app monitoring      |
-| **Sumo Logic**                            | SaaS                    | ❌           | ⚪      | ✅    | ⚪     | ⚪    | ✅               | Cloud + security ops      | Log analytics + security insights             |
-| **Dynatrace**                             | SaaS / on-prem          | ❌           | ✅      | ✅    | ✅     | ✅    | ⚪               | Enterprise, cloud-native  | AI-driven “Davis AI” root cause engine        |
-| **Grafana + Prometheus + Loki + Tempo + OTel** | Self-hosted / hybrid    | ✅           | ✅      | ✅    | ✅     | ⚪    | ⚪               | Kubernetes / cloud-native | Fully open-source modular stack               |
-| **Splunk**                                | SaaS / on-prem          | ❌           | ⚪      | ✅    | ⚪     | ⚪    | ✅               | Enterprise IT + security  | Log analytics, SIEM powerhouse                |
-| **New Relic**                             | SaaS                    | ❌           | ✅      | ✅    | ✅     | ✅    | ⚪               | App performance & DevOps   | Developer-friendly full-stack APM             |
-| **Zabbix**                                | Self-hosted             | ✅           | ✅      | ⚪    | ❌     | ⚪    | ⚪               | Infrastructure & network   | Free, customizable infrastructure monitoring  |
+| Tool / Stack                                   | Deployment Type         | Open-Source | Metrics  | Logs  | Traces        | APM   | Security / SIEM | Typical Environment       | Notes / Strengths                              |
+|------------------------------------------------|-------------------------|-------------|----------|-------|---------------|-------|-----------------|---------------------------|------------------------------------------------|
+| **Datadog**                                    | SaaS                    | ❌          | ✅      | ✅    | ✅           | ✅    | ✅             | Cloud-native, hybrid      | Unified observability, great integrations      |
+| **AWS CloudWatch**                             | SaaS (AWS-native)       | ❌          | ✅      | ✅    | ⚪ (limited) | ⚪    | ⚪             | AWS environments          | Native AWS integration                         |
+| **Nagios**                                     | Self-hosted             | ✅          | ✅      | ⚪    | ❌           | ⚪    | ⚪             | On-prem / hybrid          | Mature, plugin-based infrastructure monitoring |
+| **WhatsUp Gold**                               | Self-hosted             | ❌          | ✅      | ⚪    | ❌           | ⚪    | ⚪             | Mid-sized networks        | Easy GUI for network discovery                 |
+| **SolarWinds / Orion**                         | Self-hosted / hybrid    | ❌          | ✅      | ⚪    | ⚪           | ✅    | ⚪             | Large enterprise IT       | Strong infrastructure and app monitoring       |
+| **Sumo Logic**                                 | SaaS                    | ❌          | ⚪      | ✅    | ⚪           | ⚪    | ✅             | Cloud + security ops      | Log analytics + security insights              |
+| **Dynatrace**                                  | SaaS / on-prem          | ❌          | ✅      | ✅    | ✅           | ✅    | ⚪             | Enterprise, cloud-native  | AI-driven “Davis AI” root cause engine         |
+| **Grafana + Prometheus + Loki + Tempo + OTel** | Self-hosted / hybrid    | ✅          | ✅      | ✅    | ✅           | ⚪    | ⚪             | Kubernetes / cloud-native | Fully open-source modular stack                |
+| **Splunk**                                     | SaaS / on-prem          | ❌          | ⚪      | ✅    | ⚪           | ⚪    | ✅             | Enterprise IT + security  | Log analytics, SIEM powerhouse                 |
+| **New Relic**                                  | SaaS                    | ❌          | ✅      | ✅    | ✅           | ✅    | ⚪             | App performance & DevOps  | Developer-friendly full-stack APM              |
+| **Zabbix**                                     | Self-hosted             | ✅          | ✅      | ⚪    | ❌           | ⚪    | ⚪             | Infrastructure & network  | Free, customizable infrastructure monitoring   |
 
 ---
 
@@ -251,19 +251,19 @@ No single tool is perfect; often enterprises use combinations. But if I had to p
 
 
 ### 🔍 2. Feature Comparison Summary
-| Feature                           | Datadog        | CloudWatch | Nagios | WhatsUp Gold | SolarWinds | Sumo Logic | Dynatrace | Grafana Stack | Splunk | New Relic | Zabbix |
-| --------------------------------- | -------------- | ---------- | ------ | ------------ | ---------- | ---------- | --------- | ------------- | ------ | --------- | ------ |
-| **Infrastructure Monitoring**     | ✅              | ✅          | ✅      | ✅            | ✅          | ⚪          | ✅         | ✅             | ⚪      | ✅         | ✅      |
-| **Application Performance (APM)** | ✅              | ⚪          | ⚪      | ⚪            | ⚪          | ⚪          | ✅         | ✅ (via OTel)  | ✅      | ✅         | ⚪      |
-| **Log Management**                | ✅              | ✅          | ⚪      | ⚪            | ⚪          | ✅          | ✅         | ✅ (Loki)      | ✅      | ✅         | ⚪      |
-| **Network Monitoring**            | ✅              | ⚪          | ✅      | ✅            | ✅          | ⚪          | ✅         | ⚪             | ⚪      | ⚪         | ✅      |
-| **Security / SIEM**               | ✅ (Cloud SIEM) | ⚪          | ⚪      | ⚪            | ⚪          | ✅          | ✅         | ⚪             | ✅      | ⚪         | ⚪      |
-| **Alerting / Dashboards**         | ✅              | ✅          | ⚪      | ✅            | ✅          | ✅          | ✅         | ✅             | ✅      | ✅         | ✅      |
-| **AI / ML Insights**              | ✅              | ⚪          | ⚪      | ⚪            | ⚪          | ✅          | ✅         | ⚪             | ✅      | ✅         | ⚪      |
-| **Cloud-native Integrations**     | ✅              | ✅          | ⚪      | ⚪            | ⚪          | ✅          | ✅         | ✅             | ✅      | ✅         | ⚪      |
-| **Open Source / Extensibility**   | ⚪              | ⚪          | ✅      | ⚪            | ⚪          | ⚪          | ⚪         | ✅             | ⚪      | ⚪         | ✅      |
-| **Ease of Setup**                 | ✅              | ✅          | ⚪      | ✅            | ⚪          | ✅          | ✅         | ⚪             | ⚪      | ✅         | ⚪      |
-| **Cost**                          | 💲💲           | 💲         | 💲     | 💲           | 💲💲       | 💲💲       | 💲💲      | 💲            | 💲💲💲 | 💲💲      | 💲     |
+| Feature                           | Datadog         | CloudWatch | Nagios | WhatsUp Gold | SolarWinds | Sumo Logic | Dynatrace | Grafana Stack  | Splunk  | New Relic | Zabbix |
+| --------------------------------- | ----------------| ---------- | ------ | ------------ | ---------- | ---------- | --------  | -------------- | ------- | --------- | ------ |
+| **Infrastructure Monitoring**     | ✅              | ✅        | ✅     | ✅          | ✅         | ⚪        | ✅        | ✅            | ⚪      | ✅       | ✅     |
+| **Application Performance (APM)** | ✅              | ⚪        | ⚪     | ⚪          | ⚪         | ⚪        | ✅        | ✅ (via OTel) | ✅      | ✅       | ⚪     |
+| **Log Management**                | ✅              | ✅        | ⚪     | ⚪          | ⚪         | ✅        | ✅        | ✅ (Loki)     | ✅      | ✅       | ⚪     |
+| **Network Monitoring**            | ✅              | ⚪        | ✅     | ✅          | ✅         | ⚪        | ✅        | ⚪            | ⚪      | ⚪       | ✅     |
+| **Security / SIEM**               | ✅ (Cloud SIEM) | ⚪        | ⚪     | ⚪          | ⚪         | ✅        | ✅        | ⚪            | ✅      | ⚪       | ⚪     |
+| **Alerting / Dashboards**         | ✅              | ✅        | ⚪     | ✅          | ✅         | ✅        | ✅        | ✅            | ✅      | ✅       | ✅     |
+| **AI / ML Insights**              | ✅              | ⚪        | ⚪     | ⚪          | ⚪         | ✅        | ✅        | ⚪            | ✅      | ✅       | ⚪     |
+| **Cloud-native Integrations**     | ✅              | ✅        | ⚪     | ⚪          | ⚪         | ✅        | ✅        | ✅            | ✅      | ✅       | ⚪     |
+| **Open Source / Extensibility**   | ⚪              | ⚪        | ✅     | ⚪          | ⚪         | ⚪        | ⚪        | ✅            | ⚪      | ⚪       | ✅     |
+| **Ease of Setup**                 | ✅              | ✅        | ⚪     | ✅          | ⚪         | ✅        | ✅        | ⚪            | ⚪      | ✅       | ⚪     |
+| **Cost**                          | 💲💲            | 💲        | 💲     | 💲         | 💲💲       | 💲💲      | 💲💲     | 💲            | 💲💲💲 | 💲💲     | 💲    |
 ##### ✅ = Strong support ⚪ = Partial 💲 = Relative cost indicator
 
 ### 🧠 3. Strengths & Weaknesses
