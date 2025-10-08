@@ -251,8 +251,8 @@ No single tool is perfect; often enterprises use combinations. But if I had to p
 
 
 ### 🔍 2. Feature Comparison Summary
+![Feature Comparison Summary](photos/FeatureComparisonSummary.jpg)
 
-[🔍 2. Feature Comparison Summary](photos/FeatureComparisonSummary.jpg)
 ##### ✅ = Strong support ⚪ = Partial 💲 = Relative cost indicator
 
 ### 🧠 3. Strengths & Weaknesses
