@@ -368,7 +368,7 @@ No single tool is perfect; often enterprises use combinations. But if I had to p
 
 ###### → Grafana + Prometheus + Loki + Tempo
 
-- Ideal for developer-facing dashboards, performance metrics, and cost control.
+- Ideal for **developer-facing dashboards, performance metrics, and cost control.**
 - Can be self-hosted or managed (Grafana Cloud, Amazon Managed Prometheus, etc.).
 - Use OpenTelemetry for standardized data collection — gives flexibility to send telemetry to either your open stack or the commercial platform.
 - Great for latency-sensitive internal metrics, R&D environments, and long-term historical data retention (cheaper than commercial storage).
@@ -379,13 +379,13 @@ No single tool is perfect; often enterprises use combinations. But if I had to p
 
 ###### → SolarWinds / Orion, WhatsUp Gold, or Zabbix
 
-- SolarWinds and WhatsUp Gold remain strong for traditional SNMP-based network and device monitoring.
-- Zabbix offers a free, open-source option for on-premise environments with customizable dashboards and alerts.
+- **SolarWinds** and **WhatsUp Gold** remain strong for traditional SNMP-based network and device monitoring.
+- **Zabbix** offers a free, open-source option for on-premise environments with customizable dashboards and alerts.
 - Integrate key metrics/events into your central observability tool (Datadog/Dynatrace) to maintain a unified view.
 
 ##### 5. Cloud-Native Integrations
 
-- CloudWatch (AWS), Azure Monitor, and GCP Operations Suite should still be used for native metrics/log collection and autoscaling hooks.
+- **CloudWatch (AWS), Azure Monitor**, and **GCP Operations Suite** should still be used for native metrics/log collection and autoscaling hooks.
 - Feed those metrics into the main observability tool to avoid silos.
 - Cloud-native monitoring tools can remain the “first mile” for data collection, but not the main observability front-end.
 
@@ -393,11 +393,11 @@ No single tool is perfect; often enterprises use combinations. But if I had to p
 
 To keep the ecosystem sustainable and efficient:
 
-- Define observability tiers (e.g., Tier 1 critical services get full tracing; Tier 3 gets metrics only).
-- Set clear data retention and sampling policies — don’t collect 100% of traces/logs unless justified.
-- Centralize alerting with escalation paths and severity levels.
-- Monitor observability costs like any other cloud workload; telemetry can quietly become a large budget line.
-- Ensure data residency & compliance controls are applied across all tools (esp. for EU, Gov, or healthcare data).
+- **Define observability tiers** (e.g., Tier 1 critical services get full tracing; Tier 3 gets metrics only).
+- **Set clear data retention and sampling policies** — don’t collect 100% of traces/logs unless justified.
+- **Centralize alerting** with escalation paths and severity levels.
+- **Monitor observability costs** like any other cloud workload; telemetry can quietly become a large budget line.
+- **Ensure data residency & compliance** controls are applied across all tools (esp. for EU, Gov, or healthcare data).
 
 ## My suggestion
 
