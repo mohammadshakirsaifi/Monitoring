@@ -91,38 +91,17 @@ Each tool focuses on one or more of these pillars and may offer alerting, dashbo
 ##### Here’s a comparative breakdown of the listed tools (Datadog, CloudWatch, Nagios, WhatsUp Gold, SolarWinds/Orion, Sumo Logic, Dynatrace, Grafana+Prometheus+OTel/Loki/Tempo stack, Splunk, New Relic), focusing on their strengths & trade‑offs, and then what would tend to make the “best” choice for a large enterprise that has both multi-cloud and on‑premise needs. If you want, I can also score them (cost, performance, features etc) for your specific constraints.
 
 ### 🏗️ Architecture Diagram — Observability in a Hybrid / Multi-Cloud Enterprise
+![](photos/1- unified-observability.png)
+![](photos/2-deep-application-observability-on-aws.png)
+![](photos/3- Observability-Pipeline---Architectural-Overview.png)
+
 Below is a textual “map” of how the diagram should be structured. Use it as a guide to layout shapes, arrows, and tool icons.
+
+
+
 
 #### Diagram Layers & Components
 
-                   +---------------------------------------+
-                   |  🌐 Executive / Ops Dashboards        | 
-                   |  (Datadog UI / Dynatrace / Grafana)   |
-                   +---------------------------------------+
-                                       ↓  
-    ┌────────────────────────────────────────────────────────────────┐
-    │                Primary Observability / APM Layer               │
-    │   (Metrics, Traces, Logs, Alerts, Dashboards)                  │
-    │   — Datadog or Dynatrace as “single pane of glass”             │
-    └────────────────────────────────────────────────────────────────┘
-      ↓                ↓                  ↓                       ↓  
-┌─────────────┐  ┌─────────────┐    ┌────────────────────┐   ┌─────────────────────┐   
-│  Log & SIEM  │  │  Internal / │    │  Developer Metrics │   │  Network &          │  
-│ (Splunk /    │  │  Telemetry  │    │  / Dashboards      │   │  Infra / Cloud      │  
-│  Sumo Logic) │  │  Stack      │    │  (Grafana +        │   │  Monitoring         │  
-└──────────────┘  └─────────────┘    │  Prometheus +      │   │  (Zabbix /          │  
-      ↑                ↑             │  Loki / Tempo)     │   │  SolarWinds /       │  
-      │                │             └────────────────────┘   │  CloudWatch /       │  
-      └────────────────────────┘                       ↑      │  Azure Monitor /    │  
-                  │                            │              │  GCP Ops Suite)     │  
-                  │                            └─────────────┘  
-                  │  
-                  ↓  
-            ┌─────────────────────────────────────────┐  
-            │       Hybrid Infrastructure Layer       │  
-            │ (On-Prem, VMs, Bare Metal, Kubernetes,  │  
-            │   Containers, Multi-Cloud VMs/Services) │  
-            └─────────────────────────────────────────┘  
 
 
 # 🧩 Observability & Monitoring Tools Comparison
@@ -448,6 +427,107 @@ To keep the ecosystem sustainable and efficient:
 │    💡 Strength: Flexibility, vendor-neutral observability layer │
 │                                                               │
 └───────────────────────────────────────────────────────────────┘
+### 🧠  Key Insights
+
+- Open-source tools (Grafana stack, Zabbix, Nagios) → best for flexibility and cost control.
+- SaaS tools (Datadog, Dynatrace, New Relic) → best for speed, simplicity, and scaling with cloud.
+- Enterprise IT tools (SolarWinds, WhatsUp Gold) → ideal for legacy + network-heavy environments.
+- Log/SIEM tools (Splunk, Sumo Logic) → focus on log analytics, compliance, and security insights.
+- Hybrid approach → most organizations blend these layers for complete observability.
+┌──────────────────────────────────────────────────────────────┐
+│                   🧭 OBSERVABILITY LANDSCAPE                 │
+├──────────────────────────────────────────────────────────────┤
+
+   ┌────────────────────────────────────────────┐
+   │ 🟢 OPEN-SOURCE STACK                      │
+   ├────────────────────────────────────────────┤
+   │ • Grafana — Visualization & dashboards     │
+   │ • Prometheus — Metrics & alerting          │
+   │ • Loki — Log aggregation                   │
+   │ • Tempo — Distributed tracing              │
+   │ • OpenTelemetry — Unified instrumentation  │
+   │ • Zabbix — Infrastructure monitoring       │
+   │ • Nagios — Plugin-based monitoring system  │
+   └────────────────────────────────────────────┘
+          ⬇
+     *Self-hosted, flexible, cost-efficient*
+     *Best for DevOps and cloud-native teams*
+
+───────────────────────────────────────────────────────────────
+
+   ┌────────────────────────────────────────────┐
+   │ ☁️ SAAS OBSERVABILITY PLATFORMS            │
+   ├────────────────────────────────────────────┤
+   │ • Datadog — Full-stack observability       │
+   │ • New Relic — APM + logs + metrics         │
+   │ • Dynatrace — AI-powered full observability│
+   │ • Amazon CloudWatch — AWS-native metrics   │
+   └────────────────────────────────────────────┘
+          ⬇
+     *Fully managed, scalable, easy to deploy*
+     *Best for cloud workloads and microservices*
+
+───────────────────────────────────────────────────────────────
+
+   ┌────────────────────────────────────────────┐
+   │ ⚙️ APM (APPLICATION PERFORMANCE MONITORING)│
+   ├────────────────────────────────────────────┤
+   │ • New Relic — Full-stack APM & telemetry   │
+   │ • Dynatrace — Smart baselining & root cause│
+   │ • Datadog APM — Distributed tracing & RUM  │
+   │ • AppDynamics — (often compared)           │
+   └────────────────────────────────────────────┘
+          ⬇
+     *Deep code-level performance insight*
+     *Ideal for developers and SREs*
+
+───────────────────────────────────────────────────────────────
+
+   ┌────────────────────────────────────────────┐
+   │ 🔍 SIEM & LOG ANALYTICS                    │
+   ├────────────────────────────────────────────┤
+   │ • Splunk — Enterprise log analytics & SIEM │
+   │ • Sumo Logic — Cloud-native log analytics  │
+   │ • Elastic Stack (ELK) — (often grouped here)│
+   └────────────────────────────────────────────┘
+          ⬇
+     *Security, compliance, event correlation*
+     *Best for SOCs and incident response teams*
+
+───────────────────────────────────────────────────────────────
+
+   ┌────────────────────────────────────────────┐
+   │ 🏢 INFRASTRUCTURE & NETWORK MONITORING     │
+   ├────────────────────────────────────────────┤
+   │ • SolarWinds / Orion — Enterprise IT suite │
+   │ • WhatsUp Gold — Network monitoring & maps │
+   │ • Zabbix / Nagios — Open-source alternatives│
+   └────────────────────────────────────────────┘
+          ⬇
+     *Strong for servers, routers, and SNMP data*
+     *Common in hybrid or legacy environments*
+
+───────────────────────────────────────────────────────────────
+
+   🌐 **HYBRID ECOSYSTEM TREND**
+   ──────────────────────────────
+   → Combine OpenTelemetry for standard instrumentation  
+   → Send data to both open-source (Grafana stack) and SaaS (Datadog / Splunk) backends  
+   → Use CloudWatch or Azure Monitor for native cloud metrics  
+   → Visualize everything in Grafana or vendor dashboards  
+
+───────────────────────────────────────────────────────────────
+
+   🧠 **At a Glance**
+   ──────────────────────────────
+   | Category             | Example Tools                | Focus Area                  |
+   |-----------------------|------------------------------|-----------------------------|
+   | Open Source           | Grafana, Prometheus, Loki    | DIY Observability Stack     |
+   | SaaS Observability    | Datadog, New Relic, Dynatrace| Unified Cloud Observability |
+   | APM                  | New Relic, Datadog, Dynatrace| Application Performance     |
+   | SIEM / Log Analytics | Splunk, Sumo Logic           | Security, Logs, Compliance  |
+   | Infra Monitoring     | SolarWinds, WhatsUp Gold     | Networks, On-prem Systems   |
+
 
 ### 3. Summary Architecture Example
 
@@ -476,15 +556,7 @@ To keep the ecosystem sustainable and efficient:
 | **Governance & Cost Control**          | Implement data retention, sampling, and alert tuning policies |
 
 
-### 🧠 5. Key Insights
-
-- Open-source tools (Grafana stack, Zabbix, Nagios) → best for flexibility and cost control.
-- SaaS tools (Datadog, Dynatrace, New Relic) → best for speed, simplicity, and scaling with cloud.
-- Enterprise IT tools (SolarWinds, WhatsUp Gold) → ideal for legacy + network-heavy environments.
-- Log/SIEM tools (Splunk, Sumo Logic) → focus on log analytics, compliance, and security insights.
-- Hybrid approach → most organizations blend these layers for complete observability.
-
-### 6. 📊 Quick Comparison Summary
+### 5. 📊 Quick Comparison Summary
 | Tool / Stack         | Type        | Strengths                   | Common Use Case               |
 | -------------------- | ----------- | --------------------------- | ----------------------------- |
 | **Datadog**          | SaaS        | Unified metrics/logs/traces | Cloud-native monitoring       |
@@ -499,7 +571,7 @@ To keep the ecosystem sustainable and efficient:
 | **New Relic**        | SaaS        | Full-stack APM              | DevOps, app performance       |
 | **Zabbix**           | Open-source | Free, customizable          | Infrastructure monitoring     |
 
-#### 7. 🧠 Categorization by Focus
+#### 6. 🧠 Categorization by Focus
 | Category                                         | Tools                                        |
 | ------------------------------------------------ | -------------------------------------------- |
 | **Full Observability (metrics + logs + traces)** | Datadog, Dynatrace, New Relic, Grafana Stack |
