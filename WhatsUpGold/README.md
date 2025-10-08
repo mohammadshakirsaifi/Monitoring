@@ -175,10 +175,11 @@ You can embed your architecture diagram image below the table:
 │        User Interface       │
 │   (Web Console / Mobile App)│
 └─────────────┬───────────────┘
+```
 - **Purpose:** Provides a centralized dashboard for IT admins to view network status, configure monitoring, and manage alerts.
 - **Users:** Network administrators and IT operators.
 - **Access Methods:** Web browser, mobile app, or desktop client.
-```
+
 #### 2. Application Core Layer
 ```markdown
 ┌─────────────▼──────────────┐
@@ -189,12 +190,13 @@ You can embed your architecture diagram image below the table:
 │  Monitoring Services        │
 │  Alerting & Reporting       │
 └─────────────┬──────────────┘
+```
 - Core Engine: Manages communication with devices, executes polling, and processes data.
 - Discovery Services: Automatically identifies devices on the network via SNMP, WMI, and SSH.
 - Monitoring Services: Continuously polls metrics such as uptime, bandwidth, and CPU/memory.
 - Alerting & Reporting: Sends alerts via email, SMS, Slack, or ServiceNow and generates reports for analysis.
 - Database (SQL): Stores configuration, performance, and historical data for analysis and reporting.
-```
+
 #### 3. Infrastructure Layer
 ```markdown
 ┌────────────────┼────────────────┐
@@ -205,19 +207,20 @@ You can embed your architecture diagram image below the table:
 │ (Routers,     │ │              │ │ SaaS APIs)   │
 │ Switches, etc)│ │              │ │              │
 └──────────────┘ └──────────────┘ └──────────────┘
+```
 - Network Devices: Routers, switches, firewalls, printers, and IoT devices monitored via SNMP/ICMP.
 - Servers: On-prem Windows/Linux servers monitored via WMI/SSH.
 - Cloud & Virtual: Cloud services (AWS, Azure, Google Cloud) and VMs monitored through APIs and integrations.
-```
+  
 #### 4. Notification & Integration Layer
 ```markdown
 ┌───────────────────────────────┐
 │ Notifications & Integrations  │
 │ (Email, Slack, ServiceNow, etc)│
 └───────────────────────────────┘
+```
 - Alerts: Configurable notifications for performance thresholds and outages.
 - Integrations: Connects with ITSM tools (ServiceNow, Jira), collaboration apps (Slack, Teams), and automation workflows.
-```
 ---
 
 ![](../photos/WhatsUpGold/dashboard.jpg)
