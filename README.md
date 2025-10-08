@@ -251,24 +251,8 @@ No single tool is perfect; often enterprises use combinations. But if I had to p
 
 
 ### 🔍 2. Feature Comparison Summary
-### View the Full Comparison Table
 
-For a better view of the feature comparison, [click here to view the full table in HTML](./Feature%20Comparison%20Summary.html).
-
-| Feature                           | Datadog         | CloudWatch | Nagios | WhatsUp Gold | SolarWinds | Sumo Logic | Dynatrace | Grafana Stack  | Splunk  | New Relic | Zabbix |
-| --------------------------------- | ----------------| ---------- | ------ | ------------ | ---------- | ---------- | --------  | -------------- | ------- | --------- | ------ |
-| **Infrastructure Monitoring**     | ✅              | ✅        | ✅     | ✅          | ✅         | ⚪        | ✅        | ✅            | ⚪      | ✅       | ✅     |
-| **Application Performance (APM)** | ✅              | ⚪        | ⚪     | ⚪          | ⚪         | ⚪        | ✅        | ✅ (via OTel) | ✅      | ✅       | ⚪     |
-| **Log Management**                | ✅              | ✅        | ⚪     | ⚪          | ⚪         | ✅        | ✅        | ✅ (Loki)     | ✅      | ✅       | ⚪     |
-| **Network Monitoring**            | ✅              | ⚪        | ✅     | ✅          | ✅         | ⚪        | ✅        | ⚪            | ⚪      | ⚪       | ✅     |
-| **Security / SIEM**               | ✅ (Cloud SIEM) | ⚪        | ⚪     | ⚪          | ⚪         | ✅        | ✅        | ⚪            | ✅      | ⚪       | ⚪     |
-| **Alerting / Dashboards**         | ✅              | ✅        | ⚪     | ✅          | ✅         | ✅        | ✅        | ✅            | ✅      | ✅       | ✅     |
-| **AI / ML Insights**              | ✅              | ⚪        | ⚪     | ⚪          | ⚪         | ✅        | ✅        | ⚪            | ✅      | ✅       | ⚪     |
-| **Cloud-native Integrations**     | ✅              | ✅        | ⚪     | ⚪          | ⚪         | ✅        | ✅        | ✅            | ✅      | ✅       | ⚪     |
-| **Open Source / Extensibility**   | ⚪              | ⚪        | ✅     | ⚪          | ⚪         | ⚪        | ⚪        | ✅            | ⚪      | ⚪       | ✅     |
-| **Ease of Setup**                 | ✅              | ✅        | ⚪     | ✅          | ⚪         | ✅        | ✅        | ⚪            | ⚪      | ✅       | ⚪     |
-| **Cost**                          | 💲💲            | 💲        | 💲     | 💲         | 💲💲       | 💲💲      | 💲💲     | 💲            | 💲💲💲 | 💲💲     | 💲    |
-
+[🔍 2. Feature Comparison Summary](photos/FeatureComparisonSummary.jpg)
 ##### ✅ = Strong support ⚪ = Partial 💲 = Relative cost indicator
 
 ### 🧠 3. Strengths & Weaknesses
